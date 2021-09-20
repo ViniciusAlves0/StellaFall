@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
-    public string nomeDaCena;
+    public string Gameplay;
 
 
     public void ChangeS()
     {
-        SceneManager.LoadScene(nomeDaCena)
+        SceneManager.LoadScene(Gameplay)
     }
 
     public void Sair()
