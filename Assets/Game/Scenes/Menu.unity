@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 142110132}
   - component: {fileID: 142110131}
   - component: {fileID: 142110130}
+  - component: {fileID: 142110134}
   m_Layer: 5
   m_Name: ButtonSair
   m_TagString: Untagged
@@ -221,7 +222,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 142110132}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 142110134}
+        m_TargetAssemblyTypeName: ChangerScene, Assembly-CSharp
+        m_MethodName: Sair
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &142110132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,6 +273,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 142110128}
   m_CullTransparentMesh: 1
+--- !u!114 &142110134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142110128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccb26d1daf732d40b19a555fbc1c94e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &428705033
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,15 +454,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 507932301}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+        m_TargetAssemblyTypeName: ChangerScene, Assembly-CSharp
+        m_MethodName: ChangeS
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: gameplay
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &507932298
@@ -502,7 +527,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 507932295}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ce12675549bdd643a047680f4567bf6, type: 3}
+  m_Script: {fileID: 11500000, guid: cccb26d1daf732d40b19a555fbc1c94e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &627859586
