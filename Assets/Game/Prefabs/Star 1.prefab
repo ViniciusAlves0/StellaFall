@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 344880975}
   m_Layer: 0
   m_Name: Star 1
-  m_TagString: Untagged
+  m_TagString: Dead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -5228497196954076742, guid: e94dbe7d8e862e645904c67e6aec3861, type: 3}
+  m_Sprite: {fileID: -3903935802569237061, guid: e94dbe7d8e862e645904c67e6aec3861, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +99,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!95 &344880975
 Animator:
   serializedVersion: 3
