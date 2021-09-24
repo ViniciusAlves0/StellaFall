@@ -987,7 +987,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cccb26d1daf732d40b19a555fbc1c94e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseRef: {fileID: 0}
 --- !u!4 &1224293838
 Transform:
   m_ObjectHideFlags: 0
@@ -1402,6 +1401,8 @@ MonoBehaviour:
   - {fileID: 811349023}
   velY: {x: 0, y: 0.8}
   height: 9
+  randomPositionX: {x: 0, y: 0}
+  randomPositionY: {x: 0, y: 0}
 --- !u!1 &1586184836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1888,7 +1889,7 @@ GameObject:
   - component: {fileID: 1817537725}
   m_Layer: 0
   m_Name: Obstacles
-  m_TagString: Untagged
+  m_TagString: Dead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1937,7 +1938,9 @@ MonoBehaviour:
   - {fileID: 1675580718}
   - {fileID: 54642646}
   velY: {x: 0, y: 1.5}
-  height: 2
+  height: 2.5
+  randomPositionX: {x: -3, y: 3}
+  randomPositionY: {x: -4, y: 4}
 --- !u!1 &1835257935
 GameObject:
   m_ObjectHideFlags: 0

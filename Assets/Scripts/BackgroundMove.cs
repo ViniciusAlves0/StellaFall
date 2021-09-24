@@ -27,7 +27,7 @@ public class BackgroundMove : MonoBehaviour
             {
                 back.transform.Translate(new Vector2(0, height * (background.Length/2) * -2));
 
-                if(CompareTag("Dead") && back.transform.position.y > height * background.Length / 2)
+                if(CompareTag("Dead"))
                 {
                     float newPositionX = back.transform.localPosition.x;
                     

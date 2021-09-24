@@ -5,12 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class ChangerScene : MonoBehaviour
 {
-    public PauseController pauseRef;
 
     public void ChangeS(string gameplay)
     {
         SceneManager.LoadScene(gameplay);
-        pauseRef.pausePanel.SetActive(false);
+
     }
 
     public void Sair()
