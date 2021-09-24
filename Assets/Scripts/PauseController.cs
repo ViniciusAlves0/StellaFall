@@ -17,6 +17,7 @@ public class PauseController : MonoBehaviour
     public void ResumeGame()
         {
         pausePanel.SetActive(false);
-        }
+        Time.timeScale = 1f;
+    }
 }
 
