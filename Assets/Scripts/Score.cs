@@ -7,28 +7,26 @@ public class Score : MonoBehaviour
 {
     private TextMeshProUGUI scoreText;
     public float valor;
+    private Move player;
 
     [SerializeField] private GameObject pause;
 
     private void Start()
     {
-
-        InvokeRepeating("Valor", 01f, 0.3f);
+        InvokeRepeating("Valor", 01f, 0.4f);
 
         scoreText = GetComponent<TextMeshProUGUI>();
         valor = 0;
     }
     void Update()
     {
-        Valor();
         scoreText.text = valor.ToString();
-
     }
 
-    public void Valor()
+    private void Valor()
     {
         if (pause.activeInHierarchy == true)
             valor += 0;
-        else valor += 1;
+        else valor += 10;
     }
 }

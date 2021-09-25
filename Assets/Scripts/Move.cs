@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    private bool dead;
+    public bool dead = false;
 
-    // Update is called once per frame
     void Update()
     {
         if (dead)
@@ -23,7 +22,7 @@ public class Move : MonoBehaviour
         }
     }
 
-    public bool Death()
+    private void Death()
     {
         BackgroundMove[] background = FindObjectsOfType<BackgroundMove>();
 
@@ -33,8 +32,6 @@ public class Move : MonoBehaviour
         }
 
         dead = true;
-
-        return true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -13,10 +13,17 @@ public class BackgroundMove : MonoBehaviour
 
     [SerializeField] private Vector2 randomPositionY;
 
+    private Vector2 limiteVelY;
+
+    private void Start()
+    {
+        limiteVelY = new Vector2(0, 35);
+
+        InvokeRepeating("Aumento", 05f, 20f);
+    }
+
     void Update()
     {
-
-        InvokeRepeating("Aumento", 05f, 30f);
 
         foreach (Transform back in background)
         {
@@ -45,9 +52,11 @@ public class BackgroundMove : MonoBehaviour
 
     private void Aumento()
     {
-        velY += new Vector2(0, 2) * 2;
 
-        
-        Debug.Log(velY);
+        if (velY.y <= limiteVelY.y)
+            velY += new Vector2(0, 2) * 0.2f;
+        else velY = limiteVelY;
+
+
     }
 }
