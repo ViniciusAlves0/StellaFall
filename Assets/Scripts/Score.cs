@@ -8,8 +8,11 @@ public class Score : MonoBehaviour
     private TextMeshProUGUI scoreText;
     public float valor;
 
+    [SerializeField] private GameObject pause;
+
     private void Start()
     {
+
         InvokeRepeating("Valor", 01f, 0.3f);
 
         scoreText = GetComponent<TextMeshProUGUI>();
@@ -19,10 +22,13 @@ public class Score : MonoBehaviour
     {
         Valor();
         scoreText.text = valor.ToString();
+
     }
 
     public void Valor()
     {
-        valor += 1;
+        if (pause.activeInHierarchy == true)
+            valor += 0;
+        else valor += 1;
     }
 }

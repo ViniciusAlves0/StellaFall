@@ -15,9 +15,8 @@ public class BackgroundMove : MonoBehaviour
 
     void Update()
     {
-        velY = new Vector2(0, 2) * 2.0f;
-        Debug.Log(velY);
 
+        InvokeRepeating("Aumento", 05f, 30f);
 
         foreach (Transform back in background)
         {
@@ -44,4 +43,11 @@ public class BackgroundMove : MonoBehaviour
         }
     }
 
+    private void Aumento()
+    {
+        velY += new Vector2(0, 2) * 2;
+
+        
+        Debug.Log(velY);
+    }
 }
