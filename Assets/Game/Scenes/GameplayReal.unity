@@ -1486,16 +1486,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1224293837}
-        m_TargetAssemblyTypeName: ChangerScene, Assembly-CSharp
-        m_MethodName: ChangeS
+      - m_Target: {fileID: 102900000, guid: d3e1ad73180e597408239e767a281785, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: set_name
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Menu
+          m_StringArgument: menu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1586184839
@@ -1938,8 +1938,8 @@ MonoBehaviour:
   - {fileID: 1675580718}
   - {fileID: 54642646}
   velY: {x: 0, y: 1.5}
-  height: 2.5
-  randomPositionX: {x: -3, y: 3}
+  height: 3
+  randomPositionX: {x: -2, y: 2}
   randomPositionY: {x: -4, y: 4}
 --- !u!1 &1835257935
 GameObject:

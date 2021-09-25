@@ -36,7 +36,9 @@ public class BackgroundMove : MonoBehaviour
                     newPositionX = Random.Range(randomPositionX.x, randomPositionX.y);
                     newPositionY = Random.Range(randomPositionY.x, randomPositionY.y);
 
-                    transform.localPosition = new Vector2(newPositionX, newPositionX);
+                    back.transform.localPosition = new Vector2(newPositionX, newPositionX);
+
+                    back.transform.Translate(new Vector2(0, height * (background.Length / 2) * -0.5f));
                 }
             }
             
