@@ -6,11 +6,11 @@ using TMPro;
 public class Score : MonoBehaviour
 {
     private TextMeshProUGUI scoreText;
-    private float valor;
+    public float valor;
 
     private void Start()
     {
-        InvokeRepeating("Valor", 01f, 0.5f);
+        InvokeRepeating("Valor", 01f, 0.3f);
 
         scoreText = GetComponent<TextMeshProUGUI>();
         valor = 0;
@@ -21,7 +21,7 @@ public class Score : MonoBehaviour
         scoreText.text = valor.ToString();
     }
 
-    private void Valor()
+    public void Valor()
     {
         valor += 1;
     }

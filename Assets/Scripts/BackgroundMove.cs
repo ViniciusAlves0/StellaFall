@@ -13,24 +13,22 @@ public class BackgroundMove : MonoBehaviour
 
     [SerializeField] private Vector2 randomPositionY;
 
-
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
+        velY = new Vector2(0, 2) * 2.0f;
+        Debug.Log(velY);
+
+
         foreach (Transform back in background)
         {
-           if(back.transform.position.y > height * background.Length/2)
+            if (back.transform.position.y > height * background.Length / 2)
             {
-                back.transform.Translate(new Vector2(0, height * (background.Length/2) * -2));
+                back.transform.Translate(new Vector2(0, height * (background.Length / 2) * -2));
 
-                if(CompareTag("Dead"))
+                if (CompareTag("Dead"))
                 {
                     float newPositionX = back.transform.localPosition.x;
-                    
+
                     float newPositionY = back.transform.localPosition.y;
 
                     newPositionX = Random.Range(randomPositionX.x, randomPositionX.y);
@@ -41,8 +39,9 @@ public class BackgroundMove : MonoBehaviour
                     back.transform.Translate(new Vector2(0, height * (background.Length / 2) * -0.5f));
                 }
             }
-            
+
             back.Translate(velY * Time.deltaTime);
         }
     }
+
 }

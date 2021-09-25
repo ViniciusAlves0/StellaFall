@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    [SerializeField] private BackgroundMove moveObs;
     private bool dead;
 
     // Update is called once per frame
@@ -24,7 +23,7 @@ public class Move : MonoBehaviour
         }
     }
 
-    private void Death()
+    public bool Death()
     {
         BackgroundMove[] background = FindObjectsOfType<BackgroundMove>();
 
@@ -34,11 +33,15 @@ public class Move : MonoBehaviour
         }
 
         dead = true;
+
+        return true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Dead"))
+        {
             Death();
+        }
     }
 }
