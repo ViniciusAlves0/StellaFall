@@ -9,18 +9,15 @@ public class Score : MonoBehaviour
     private float valor;
 
     [SerializeField] private GameObject pause;
-    private Move player;
 
     private void Start()
     {
-
+        InvokeRepeating("Valor", 01f, 0.4f);
         scoreText = GetComponent<TextMeshProUGUI>();
         valor = 0;
     }
     void Update()
     {
-        if(player.dead == false)
-            InvokeRepeating("Valor", 01f, 0.4f);
 
         scoreText.text = valor.ToString();
     }
