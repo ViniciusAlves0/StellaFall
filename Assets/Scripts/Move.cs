@@ -4,24 +4,32 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    public bool dead = false;
+
+    public bool dead;
+   
+
+    void Start()
+    {
+        dead = false;
+    }
 
     void Update()
     {
         if (dead)
             return;
 
-        if(Input.touchCount > 0)
+        if (Input.touchCount > 0)
         {
             Touch t = Input.GetTouch(0);
 
-            if(t.phase == TouchPhase.Moved)
+            if (t.phase == TouchPhase.Moved)
             {
-                transform.position += (Vector3)t.deltaPosition/250;
+                transform.position += (Vector3)t.deltaPosition / 250;
             }
         }
-    }
 
+
+    }
     private void Death()
     {
         BackgroundMove[] background = FindObjectsOfType<BackgroundMove>();
@@ -32,6 +40,7 @@ public class Move : MonoBehaviour
         }
 
         dead = true;
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,4 +50,5 @@ public class Move : MonoBehaviour
             Death();
         }
     }
+
 }
