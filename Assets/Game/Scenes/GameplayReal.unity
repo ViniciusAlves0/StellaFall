@@ -1880,6 +1880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pause: {fileID: 536232260}
+  move: {fileID: 1964869661}
 --- !u!1001 &1510314487
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class Score : MonoBehaviour
     private float valor;
 
     [SerializeField] private GameObject pause;
+    [SerializeField] private Move move;
 
     private void Start()
     {
@@ -24,7 +25,7 @@ public class Score : MonoBehaviour
 
     private void Valor()
     {
-        if (pause.activeInHierarchy)
+        if (pause.activeInHierarchy || move.dead)
         {
             valor += 0;
         }
