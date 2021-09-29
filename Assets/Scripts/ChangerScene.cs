@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ChangerScene : MonoBehaviour
 {
+    private Animator começa;
 
     public void ChangeS(string gameplay)
     {

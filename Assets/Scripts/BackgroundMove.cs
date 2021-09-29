@@ -14,6 +14,7 @@ public class BackgroundMove : MonoBehaviour
     [SerializeField] private Vector2 randomPositionY;
 
     private Vector2 limiteVelY;
+    [SerializeField] private GameObject cut;
 
     private void Start()
     {
@@ -43,6 +44,11 @@ public class BackgroundMove : MonoBehaviour
                     back.transform.localPosition = new Vector2(newPositionX, newPositionX);
 
                     back.transform.Translate(new Vector2(0, height * (background.Length / 2) * -0.5f));
+                }
+
+                if (CompareTag("Inicio") && back.transform.position.y > height * background.Length)
+                {
+                    Destroy(cut);
                 }
             }
 
