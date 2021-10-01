@@ -1,34 +1,25 @@
 fileFormatVersion: 2
-guid: 9dea9586122f47a41b1d5b260c456aee
+guid: 27d92f0033d0fa144a721e784de04f76
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8354647120319438263
-    second: quarto deitar1_0
+      213: -817765480408606185
+    second: quarto deitar central_0
   - first:
-      213: -6723669503202171897
-    second: quarto deitar1_1
+      213: 341957886876856649
+    second: quarto deitar central_1
   - first:
-      213: -2840270943151717556
-    second: quarto deitar1_2
+      213: 6049331977914959371
+    second: quarto deitar central_2
   - first:
-      213: -6314387453239584649
-    second: quarto deitar1_3
+      213: -9029744651194186807
+    second: quarto deitar central_3
   - first:
-      213: 6273271666117930777
-    second: quarto deitar1_4
+      213: -7704398906751726632
+    second: quarto deitar central_4
   - first:
-      213: 8932158464234026466
-    second: quarto deitar1_5
-  - first:
-      213: 6343856420539014510
-    second: quarto deitar1_6
-  - first:
-      213: -5763348506835123877
-    second: quarto deitar1_7
-  - first:
-      213: -6522378468162845006
-    second: quarto deitar1_8
+      213: 5048149643099931703
+    second: quarto deitar central_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -142,70 +133,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: quarto deitar1_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1800
-        width: 600
-        height: 900
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 942ae9975b45e0c80800000000000000
-      internalID: -8354647120319438263
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: quarto deitar1_1
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 1800
-        width: 600
-        height: 900
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 704e18ad53ab0b2a0800000000000000
-      internalID: -6723669503202171897
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: quarto deitar1_2
-      rect:
-        serializedVersion: 2
-        x: 1200
-        y: 1800
-        width: 600
-        height: 900
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c43049720a45598d0800000000000000
-      internalID: -2840270943151717556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: quarto deitar1_3
+      name: quarto deitar central_0
       rect:
         serializedVersion: 2
         x: 0
@@ -219,14 +147,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 778987bf01ace58a0800000000000000
-      internalID: -6314387453239584649
+      spriteID: 71a1ba6d0a6b6a4f0800000000000000
+      internalID: -817765480408606185
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: quarto deitar1_4
+      name: quarto deitar central_1
       rect:
         serializedVersion: 2
         x: 600
@@ -240,14 +168,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91f6b76d7532f0750800000000000000
-      internalID: 6273271666117930777
+      spriteID: 9413077e2e0eeb400800000000000000
+      internalID: 341957886876856649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: quarto deitar1_5
+      name: quarto deitar central_2
       rect:
         serializedVersion: 2
         x: 1200
@@ -261,14 +189,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e5fa227cc665fb70800000000000000
-      internalID: 8932158464234026466
+      spriteID: b064808126b83f350800000000000000
+      internalID: 6049331977914959371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: quarto deitar1_6
+      name: quarto deitar central_3
       rect:
         serializedVersion: 2
         x: 0
@@ -282,14 +210,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6d1f44adc7e90850800000000000000
-      internalID: 6343856420539014510
+      spriteID: 9c34615d417efa280800000000000000
+      internalID: -9029744651194186807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: quarto deitar1_7
+      name: quarto deitar central_4
       rect:
         serializedVersion: 2
         x: 600
@@ -303,14 +231,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b51805d81197400b0800000000000000
-      internalID: -5763348506835123877
+      spriteID: 8dbc723930a741590800000000000000
+      internalID: -7704398906751726632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: quarto deitar1_8
+      name: quarto deitar central_5
       rect:
         serializedVersion: 2
         x: 1200
@@ -324,8 +252,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b64f7a175bdb75a0800000000000000
-      internalID: -6522378468162845006
+      spriteID: 7348cf9aa51ae0640800000000000000
+      internalID: 5048149643099931703
       vertices: []
       indices: 
       edges: []
