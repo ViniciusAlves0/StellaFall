@@ -6,13 +6,9 @@ public class Move : MonoBehaviour
 {
 
     public bool dead;
-    //private Transform myTransform;
-    //[SerializeField] private Vector2 moveVel;
-   
 
     void Start()
     {
-        //myTransform = GetComponent<Transform>();
         dead = false;
     }
 
@@ -57,13 +53,5 @@ public class Move : MonoBehaviour
             Death();
         }
     }
-
-    /*public void Mover()
-    {
-        if (dead)
-            return;
-
-        myTransform.Translate(moveVel * Time.deltaTime);
-    }*/
 
 }

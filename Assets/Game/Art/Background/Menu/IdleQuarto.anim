@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Quarto
+  m_Name: IdleQuarto
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -21,17 +21,17 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 6244114596062699740, guid: bb83c210fd17a7443a807c9704689f0d, type: 3}
-    - time: 0.21666667
+    - time: 0.31666666
       value: {fileID: 6230963332297351243, guid: bb83c210fd17a7443a807c9704689f0d, type: 3}
-    - time: 0.45
+    - time: 0.6166667
       value: {fileID: 5375273873904962409, guid: bb83c210fd17a7443a807c9704689f0d, type: 3}
-    - time: 0.6666667
+    - time: 0.9166667
       value: {fileID: 3542020129668081424, guid: bb83c210fd17a7443a807c9704689f0d, type: 3}
-    - time: 0.8833333
+    - time: 1.25
       value: {fileID: 8205331053892827903, guid: bb83c210fd17a7443a807c9704689f0d, type: 3}
-    - time: 1.1166667
+    - time: 1.5666667
       value: {fileID: -4158299905689321926, guid: bb83c210fd17a7443a807c9704689f0d, type: 3}
-    - time: 1.3333334
+    - time: 1.8666667
       value: {fileID: -4158299905689321926, guid: bb83c210fd17a7443a807c9704689f0d, type: 3}
     attribute: m_Sprite
     path: 
@@ -64,7 +64,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.35
+    m_StopTime: 1.8833333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

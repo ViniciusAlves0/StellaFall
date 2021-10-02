@@ -49,7 +49,7 @@ public class Obstacles : MonoBehaviour
             newPositionX = Random.Range(randomPositionX.x, randomPositionX.y);
             newPositionY = Random.Range(randomPositionY.x, randomPositionY.y);
 
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(1.5f);
             StartCoroutine(Clone());
 
             if (obs.transform.position.y > heightObs * 2)
@@ -62,8 +62,7 @@ public class Obstacles : MonoBehaviour
 
     private IEnumerator Clone()
     {
-        yield return new WaitForSeconds(3);
-
+        yield return new WaitForSeconds(1.5f);
         Instantiate(obs, new Vector2(newPositionX, newPositionY), Quaternion.identity);
     }
 }
