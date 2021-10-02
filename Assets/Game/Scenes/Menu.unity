@@ -2047,7 +2047,6 @@ GameObject:
   - component: {fileID: 1805315807}
   - component: {fileID: 1805315809}
   - component: {fileID: 1805315808}
-  - component: {fileID: 1805315810}
   m_Layer: 5
   m_Name: FundoTeste
   m_TagString: Untagged
@@ -2114,25 +2113,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805315806}
   m_CullTransparentMesh: 1
---- !u!95 &1805315810
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1805315806}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fdb7b0a4018fa954682017ec1fa01815, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1852951380 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 320413450463061853, guid: 6c8dd53b12d9d0d46803cc562ca82fd2, type: 3}

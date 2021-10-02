@@ -28,9 +28,9 @@ public class BackgroundMove : MonoBehaviour
 
         foreach (Transform back in background)
         {
-            if (back.transform.position.y > height * background.Length / 2)
+            if (back.transform.position.y > height * background.Length / 6)
             {
-                back.transform.Translate(new Vector2(0, height * (background.Length / 2) * -2));
+                back.transform.Translate(new Vector2(0, height * (background.Length / 6) * -2));
 
                 if (CompareTag("Dead"))
                 {
