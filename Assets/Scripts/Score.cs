@@ -16,10 +16,17 @@ public class Score : MonoBehaviour
         InvokeRepeating("Valor", 01f, 0.4f);
         scoreText = GetComponent<TextMeshProUGUI>();
         valor = 0;
+        StartCoroutine(SlowUpdate());
     }
-    void Update()
+
+    IEnumerator SlowUpdate()
     {
-        scoreText.text = valor.ToString();
+        while (true)
+        {
+            yield return new WaitForSeconds(0.1f);
+
+            scoreText.text = valor.ToString();
+        }
     }
 
     private void Valor()

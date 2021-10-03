@@ -8,62 +8,48 @@ public class Obstacles : MonoBehaviour
 {
     [SerializeField] private GameObject obs;
     [SerializeField] private Move player;
-    [SerializeField] private float heightObs;
-    
+    [SerializeField] private StarSpawn spawn;
+
     [SerializeField] private Vector2 velY;
-
-    [SerializeField] private Vector2 randomPositionX;
-
-    [SerializeField] private Vector2 randomPositionY;
-
-    float newPositionX;
-    float newPositionY;
 
     private void Start()
     {
-        newPositionX = obs.transform.localPosition.x;
 
-        newPositionY = obs.transform.localPosition.y;
-
-        StartCoroutine(SlowUpdate());
     }
 
     void Update()
     {
         if (player.dead)
         {  
-            StopAllCoroutines();
             return; 
         }
 
         obs.transform.Translate(velY * Time.deltaTime);
 
-    }
-
-    IEnumerator SlowUpdate()
-    {
-        while (true)
+        if (obs.transform.position.y > spawn.heightObs * 2)
         {
-            yield return new WaitForSeconds(0.5f);
-
-            newPositionX = Random.Range(randomPositionX.x, randomPositionX.y);
-            newPositionY = Random.Range(randomPositionY.x, randomPositionY.y);
-
-            yield return new WaitForSeconds(1.5f);
-            StartCoroutine(Clone());
-
-            if (obs.transform.position.y > heightObs * 2)
+            if (obs.name == "Star 1")
             {
-                Destroy(obs);
+                return;
             }
-
+            else Destroy(obs);
         }
+
     }
 
-    private IEnumerator Clone()
+    private void Colidiu()
     {
-        yield return new WaitForSeconds(1.5f);
-        Instantiate(obs, new Vector2(newPositionX, newPositionY), Quaternion.identity);
+        Destroy(obs);
+
+        spawn.newStar = Instantiate(obs, new Vector2(spawn.newPositionX, spawn.newPositionY), Quaternion.identity);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Dead"))
+        {
+            Colidiu();
+        }
     }
 }
 
