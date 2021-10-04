@@ -16,6 +16,11 @@ public class Move : MonoBehaviour
 
     void Update()
     {
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("GameO") && dead)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+
         if (dead)
             return;
 
@@ -46,7 +51,6 @@ public class Move : MonoBehaviour
 
         dead = true;
         animator.SetBool("Morreu", true);
-        SceneManager.LoadScene("GameOver");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
