@@ -6,15 +6,15 @@ using Random = UnityEngine.Random;
 
 public class Obstacles : MonoBehaviour
 {
-    [SerializeField] private GameObject obs;
     [SerializeField] private Move player;
     [SerializeField] private StarSpawn spawn;
+    [SerializeField] private BackgroundMove aumento;
 
     [SerializeField] private Vector2 velY;
 
     private void Start()
     {
-
+        InvokeRepeating("Aumento", 5f, 15f);
     }
 
     void Update()
@@ -24,32 +24,41 @@ public class Obstacles : MonoBehaviour
             return; 
         }
 
-        obs.transform.Translate(velY * Time.deltaTime);
+       transform.Translate(velY * Time.deltaTime);
 
-        if (obs.transform.position.y > spawn.heightObs * 2)
+        if (transform.position.y > spawn.heightObs * 2)
         {
-            if (obs.name == "Star 1")
+            if (name == "Star 1")
             {
                 return;
             }
-            else Destroy(obs);
+            else Destroy(gameObject);
         }
 
     }
 
     private void Colidiu()
     {
-        Destroy(obs);
+        Destroy(gameObject);
 
-        spawn.newStar = Instantiate(obs, new Vector2(spawn.newPositionX, spawn.newPositionY), Quaternion.identity);
+        Debug.Log("colidiuEstrela");
+
+        spawn.newStar = Instantiate(spawn.obs, new Vector2(spawn.newPositionX, spawn.newPositionY), Quaternion.identity);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Dead"))
         {
             Colidiu();
         }
+    }
+
+    private void Aumento()
+    {
+        if (velY.y <= aumento.limiteVelY.y)
+            velY += new Vector2(0, 2) * 0.3f;
+        else velY = aumento.limiteVelY;
     }
 }
 

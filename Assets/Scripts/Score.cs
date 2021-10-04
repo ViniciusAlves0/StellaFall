@@ -13,7 +13,7 @@ public class Score : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("Valor", 01f, 0.4f);
+        InvokeRepeating("Valor", 1f, 0.4f);
         scoreText = GetComponent<TextMeshProUGUI>();
         valor = 0;
         StartCoroutine(SlowUpdate());

@@ -6,10 +6,12 @@ public class Move : MonoBehaviour
 {
 
     public bool dead;
+    [SerializeField] private Animator animator;
 
     void Start()
     {
         dead = false;
+        animator.SetBool("Morreu", false);
     }
 
     void Update()
@@ -43,6 +45,7 @@ public class Move : MonoBehaviour
         }
 
         dead = true;
+        animator.SetBool("Morreu", true);
 
     }
 
