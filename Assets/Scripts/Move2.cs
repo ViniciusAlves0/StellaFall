@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Move2 : MonoBehaviour
+public float speed;
+Rigidbody2D rigidbody2d;
+
+void Start()
 {
-    public float speed;
-    Rigidbody2D rigidbody2d;
+    rigidbody2d = GetComponent<Rigidbody2D>();
+}
+public class Move : MonoBehaviour
+{
     public bool dead;
     [SerializeField] private Animator animator;
-
-    void Start()
-    {
-        rigidbody2d = GetComponent<Rigidbody2D>();
-    }
 
     void Start()
     {
@@ -68,5 +68,3 @@ public class Move2 : MonoBehaviour
         }
     }
 }
-
-
