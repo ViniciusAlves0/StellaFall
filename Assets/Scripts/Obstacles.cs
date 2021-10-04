@@ -15,6 +15,7 @@ public class Obstacles : MonoBehaviour
     private void Start()
     {
         InvokeRepeating("Aumento", 5f, 15f);
+
     }
 
     void Update()
@@ -24,11 +25,17 @@ public class Obstacles : MonoBehaviour
             return; 
         }
 
-       transform.Translate(velY * Time.deltaTime);
+        transform.Translate(velY * Time.deltaTime);
 
+        if (name == "Star 2")
+        {
+            StarVel2();
+            transform.Translate(velY * Time.deltaTime);
+        }
+        
         if (transform.position.y > spawn.heightObs * 2)
         {
-            if (name == "Star 1")
+            if (name == "Star 1" || name == "Star 2")
             {
                 return;
             }
@@ -39,26 +46,41 @@ public class Obstacles : MonoBehaviour
 
     private void Colidiu()
     {
-        Destroy(gameObject);
-
-        Debug.Log("colidiuEstrela");
-
         spawn.newStar = Instantiate(spawn.obs, new Vector2(spawn.newPositionX, spawn.newPositionY), Quaternion.identity);
+
+        Destroy(gameObject);
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void Colidiu2()
     {
-        if (collision.gameObject.CompareTag("Dead"))
-        {
-            Colidiu();
-        }
+        spawn.newStar2 = Instantiate(spawn.obs2, new Vector2(spawn.newPositionX2, spawn.newPositionY2), Quaternion.identity);
+
+        Destroy(gameObject);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(name == "Star 1") Colidiu();
+        else if(name == "Star 2") Colidiu2();
+    }
+
 
     private void Aumento()
     {
         if (velY.y <= aumento.limiteVelY.y)
-            velY += new Vector2(0, 2) * 0.3f;
+        {
+            velY += new Vector2(0.5f, 2f) * 0.3f;
+        }
         else velY = aumento.limiteVelY;
+    }
+
+    private void StarVel2()
+    {
+        if (spawn.posX2 > 0)
+        {
+            velY = new Vector2(velY.x * -1, velY.y);
+        }
+        else velY = new Vector2(velY.x * 1, velY.y);
     }
 }
 
