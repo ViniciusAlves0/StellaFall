@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Move : MonoBehaviour
 {
-
     public bool dead;
     [SerializeField] private Animator animator;
 
@@ -46,7 +46,7 @@ public class Move : MonoBehaviour
 
         dead = true;
         animator.SetBool("Morreu", true);
-
+        SceneManager.LoadScene("GameOver");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -56,5 +56,4 @@ public class Move : MonoBehaviour
             Death();
         }
     }
-
 }
