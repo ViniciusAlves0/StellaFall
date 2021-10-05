@@ -78,7 +78,7 @@ public class StarSpawn : MonoBehaviour
 
             yield return StartCoroutine(Clone());
 
-            if(scoreRef.valor > 1000f) Star2();
+            if(DATA.Valor > 1000f) Star2();
         }
     }
 

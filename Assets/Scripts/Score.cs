@@ -6,16 +6,15 @@ using TMPro;
 public class Score : MonoBehaviour
 {
     private TextMeshProUGUI scoreText;
-    public float valor;
+    //public float valor;
 
     [SerializeField] private GameObject pause;
     [SerializeField] private Move move;
 
     private void Start()
     {
-        InvokeRepeating("Valor", 1f, 0.4f);
+        InvokeRepeating("ValorNovo", 1f, 0.4f);
         scoreText = GetComponent<TextMeshProUGUI>();
-        valor = 0;
         StartCoroutine(SlowUpdate());
     }
 
@@ -25,19 +24,21 @@ public class Score : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
 
-            scoreText.text = valor.ToString();
+            scoreText.text = DATA.Valor.ToString();
         }
+
+        Debug.Log(DATA.Valor);
     }
 
-    private void Valor()
+    private void ValorNovo()
     {
         if (pause.activeInHierarchy || move.dead)
         {
-            valor += 0;
+            DATA.Valor += 0;
         }
         else
         {
-            valor += 10;
+            DATA.Valor += 10;
         }
     }
 }
