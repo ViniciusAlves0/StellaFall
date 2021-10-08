@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4044601189667477880}
   - component: {fileID: 4044601189667477881}
   - component: {fileID: 4044601189667477885}
+  - component: {fileID: 1205147896}
   m_Layer: 0
   m_Name: Star 2
   m_TagString: Dead
@@ -132,4 +133,23 @@ MonoBehaviour:
   player: {fileID: 0}
   spawn: {fileID: 0}
   aumento: {fileID: 0}
-  velY: {x: 0.1, y: 2}
+  velY: {x: 2, y: 2}
+--- !u!95 &1205147896
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4044601189667477878}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bb656e7a75611f54ab634c60cc089d74, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

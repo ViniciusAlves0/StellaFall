@@ -7,9 +7,12 @@ public class Move : MonoBehaviour
 {
     public bool dead;
     [SerializeField] private Animator animator;
+    private AudioSource morteSom;
 
     void Start()
     {
+        morteSom = GetComponent<AudioSource>();
+        DATA.Cut = 1;
         dead = false;
         animator.SetBool("Morreu", false);
     }
@@ -51,6 +54,7 @@ public class Move : MonoBehaviour
 
         dead = true;
         animator.SetBool("Morreu", true);
+        morteSom.Play();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

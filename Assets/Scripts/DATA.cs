@@ -5,6 +5,7 @@ using UnityEngine;
 public class DATA : MonoBehaviour
 {
     public static float Valor;
+    public static float Cut;
     [SerializeField] private GameObject[] Datas;
 
     private void Awake()
