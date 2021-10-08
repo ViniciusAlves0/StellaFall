@@ -6,8 +6,6 @@ using TMPro;
 public class Score : MonoBehaviour
 {
     private TextMeshProUGUI scoreText;
-    //public float valor;
-
     [SerializeField] private GameObject pause;
     [SerializeField] private Move move;
 
