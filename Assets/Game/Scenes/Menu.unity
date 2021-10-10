@@ -1850,9 +1850,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1243442020}
   - component: {fileID: 1243442019}
+  - component: {fileID: 1243442022}
   m_Layer: 0
   m_Name: Poison Arrow - dj poolboi Remix_160k
-  m_TagString: Untagged
+  m_TagString: Music
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1967,6 +1968,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1243442022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243442018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af25f931768dd5d4e8daabc7fb3240e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Musica: []
 --- !u!4 &1253388671 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 320413450463061853, guid: 6c8dd53b12d9d0d46803cc562ca82fd2, type: 3}
@@ -2112,7 +2126,7 @@ RectTransform:
   m_GameObject: {fileID: 1391178027}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children:
   - {fileID: 629961803}
   - {fileID: 1436603367}

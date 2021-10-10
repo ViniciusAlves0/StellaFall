@@ -10,6 +10,8 @@ public class DATA : MonoBehaviour
 
     private void Awake()
     {
+        Datas = GameObject.FindGameObjectsWithTag("Data");
+
         if(Datas.Length >= 2)
         {
             Destroy(Datas[0]);
