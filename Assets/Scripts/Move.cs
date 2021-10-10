@@ -35,7 +35,6 @@ public class Move : MonoBehaviour
             {
                 transform.position += (Vector3)t.deltaPosition / 250;
             }
-
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))

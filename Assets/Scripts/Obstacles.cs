@@ -15,7 +15,6 @@ public class Obstacles : MonoBehaviour
     private void Start()
     {
         InvokeRepeating("Aumento", 5f, 15f);
-
     }
 
     void Update()
@@ -41,7 +40,6 @@ public class Obstacles : MonoBehaviour
             }
             else Destroy(gameObject);
         }
-
     }
 
     private void Colidiu()
@@ -58,7 +56,7 @@ public class Obstacles : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if(name == "Star 1") Colidiu();
         else if(name == "Star 2") Colidiu2();
